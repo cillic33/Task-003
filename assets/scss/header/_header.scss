@@ -1,0 +1,28 @@
+
+.header {
+	position: fixed;
+    top: 0;
+	width: 100%;
+	height: $header-height;
+	background: rgba(16, 16, 29, 0.9);
+	
+	&__wrapper {
+		width: 100%;
+		height: $header-height;
+		max-width: $wrapper-size;
+		margin: 0 auto;
+		
+		display: -webkit-flex; 
+		display: flex;
+		
+		-webkit-flex-direction: row;
+		flex-direction: row;
+		
+		-webkit-justify-content: space-between;
+		justify-content: space-between;
+		
+		-webkit-align-items: center;
+		align-items: center;
+	}
+}
+
