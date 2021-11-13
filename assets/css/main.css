@@ -9,6 +9,7 @@ body {
   font-style: normal;
   font-size: 16px;
   color: #ffffff;
+  min-height: 100vh;
 }
 
 .header {
@@ -33,8 +34,35 @@ body {
   align-items: center;
 }
 
+.logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  font-size: 28px;
+  line-height: 33px;
+  text-transform: uppercase;
+}
+.logo span {
+  color: #3E9CDC;
+}
+
 .menu__item {
   display: inline-block;
+  padding: 0 30px;
+}
+.menu__item a {
+  display: flex;
+  color: #ffffff;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.menu__item a:hover {
+  color: #3e9cdc;
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=main.css.map */
