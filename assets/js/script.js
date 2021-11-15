@@ -3,7 +3,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const sm = 800
 
     window.addEventListener('resize', e => {
-        if (document.documentElement.clientWidth > sm) {
+        const docWidth = document.documentElement.clientWidth
+        if (docWidth > sm) {
             $('.menu__body').show()
         } else {
             $('.menu__body').hide()
@@ -12,7 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('click', e => {
         const target = e.target
-        if (!(target).closest('.header__menu')) {
+        const docWidth = document.documentElement.clientWidth
+        if (!(target).closest('.header__menu') && docWidth <= 800) {
+            console.log(sm)
             $('.menu__body').slideUp()
         }
     })
