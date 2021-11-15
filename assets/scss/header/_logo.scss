@@ -9,4 +9,8 @@
 	span {
 		color: #3E9CDC;
 	}
+
+	@include max-screen($xs) {
+		font-size: 22px;
+	}
 }

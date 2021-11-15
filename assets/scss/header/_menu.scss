@@ -1,4 +1,25 @@
 .menu {
+	&__icon {
+		width: 26px;
+
+		img {
+			display: none;
+			@include max-screen($sm) {
+				display: block;
+			}
+		}
+	}
+	&__body {
+		@include max-screen($sm) {
+			display: none;
+			position: absolute;
+			background: $header-bg;
+			right: 0;
+			padding: 10px 22px;
+			border-radius: 0 0 3px 3px;
+			top: 100px;
+		}
+	}
 	&__item {
 		display: inline-block;
 		padding: 0 30px;
@@ -14,9 +35,25 @@
 			transition: 0.5s;
 		}
 
-		a:hover {
-			color: #3e9cdc;
-			transform: scale(1.1);
+		@include is-hover {
+			a:hover {
+				color: #3e9cdc;
+				transform: scale(1.1);
+			}
 		}
+
+		@include is-no-hover {
+			a:hover {
+				color: #3e9cdc;
+			}
+		}
+
+		@include max-screen($sm) {
+			display: block;
+			padding: 8px 0;
+		}
+	}
+	&__item:last-child {
+		padding-right: 0;
 	}
 }

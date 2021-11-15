@@ -3,7 +3,7 @@
     top: 0;
 	width: 100%;
 	height: $header-height;
-	background: rgba(16, 16, 29, 0.9);
+	background: $header-bg;
 	
 	&__wrapper {
 		width: 100%;
@@ -22,5 +22,10 @@
 		
 		-webkit-align-items: center;
 		align-items: center;
+
+		@include max-screen($lg) {
+			padding: 0 30px;
+			box-sizing: border-box;
+		}
 	}
 }

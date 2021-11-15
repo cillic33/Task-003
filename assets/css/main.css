@@ -33,6 +33,12 @@ body {
   -webkit-align-items: center;
   align-items: center;
 }
+@media screen and (max-width: 1230px) {
+  .header__wrapper {
+    padding: 0 30px;
+    box-sizing: border-box;
+  }
+}
 
 .logo {
   font-family: "Raleway", sans-serif;
@@ -45,7 +51,34 @@ body {
 .logo span {
   color: #3E9CDC;
 }
+@media screen and (max-width: 375px) {
+  .logo {
+    font-size: 22px;
+  }
+}
 
+.menu__icon {
+  width: 26px;
+}
+.menu__icon img {
+  display: none;
+}
+@media screen and (max-width: 800px) {
+  .menu__icon img {
+    display: block;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu__body {
+    display: none;
+    position: absolute;
+    background: rgba(16, 16, 29, 0.9);
+    right: 0;
+    padding: 10px 22px;
+    border-radius: 0 0 3px 3px;
+    top: 100px;
+  }
+}
 .menu__item {
   display: inline-block;
   padding: 0 30px;
@@ -60,9 +93,25 @@ body {
   text-decoration: none;
   transition: 0.5s;
 }
-.menu__item a:hover {
-  color: #3e9cdc;
-  transform: scale(1.1);
+@media (hover: hover) and (pointer: fine) {
+  .menu__item a:hover {
+    color: #3e9cdc;
+    transform: scale(1.1);
+  }
+}
+@media (hover: none) {
+  .menu__item a:hover {
+    color: #3e9cdc;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu__item {
+    display: block;
+    padding: 8px 0;
+  }
+}
+.menu__item:last-child {
+  padding-right: 0;
 }
 
 /*# sourceMappingURL=main.css.map */
