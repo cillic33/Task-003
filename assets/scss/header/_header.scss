@@ -4,7 +4,8 @@
 	width: 100%;
 	height: $header-height;
 	background: $header-bg;
-	
+	z-index: 1;
+
 	&__wrapper {
 		width: 100%;
 		height: $header-height;

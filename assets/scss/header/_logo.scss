@@ -7,7 +7,7 @@
 	text-transform: uppercase;
 	
 	span {
-		color: #3E9CDC;
+		color: $second-text-color;
 	}
 
 	@include max-screen($xs) {

@@ -1,0 +1,128 @@
+.banner {
+    width: 100%;
+
+    &__img {
+        width: 100%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+		width: 100%;
+		height: auto;
+        position: absolute;
+        padding-top: $header-height;
+        top: 0;
+    }
+
+    &__text {
+		width: 100%;
+		height: auto;
+		max-width: $wrapper-size;
+        margin: 0 auto;
+        font-size: 0;
+
+        @include max-screen($lg) {
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    &__groupP {
+        margin: 80px 0;
+
+        @include change-content($xxs, $wrapper-size) {
+            margin: calc(10px + (80 - 10) * ( (100vw - 320px) / (1170 - 320) )) 0;
+        }
+        @include change-content($sm, $lg) {
+            margin: 20px 0;
+        }
+    }
+
+    &__p {
+        color: #000;
+        font-family: $default-font-family;
+        font-weight: 400;
+        font-size: 20px;
+        font-style: $default-font-style;
+
+        @include change-content($xxs, $wrapper-size) {
+            font-size: calc(8px + (20 - 8) * ( (100vw - 320px) / (1170 - 320) ));
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        text-transform: uppercase;
+        font-family: $second-font-family;
+
+        span {
+            color: $second-text-color;
+            font-family: $default-font-family;
+        }
+
+        @include change-content($xxs, $wrapper-size) {
+            font-size: calc(13px + (48 - 13) * ( (100vw - 320px) / (1170 - 320) ));
+        }
+    }
+
+    &__title2 {
+        font-weight: 700;
+    }
+
+    &__btn {
+        display: -webkit-inline-flex;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 183px;
+        height: 43px;
+        font-family: $default-font-family;
+        font-size: 13px;
+        font-weight: 400;
+        font-style: $default-font-style;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: $third-text-color;
+        border: 1px solid $third-text-color;
+        background: $default-text-color;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: 0.5s;
+
+        &:hover {
+            background: #444;
+            color: $default-text-color;
+            border: 1px solid $default-text-color;
+            font-weight: 500;
+        }
+
+        @include change-content($xxs, $wrapper-size) {
+            width: calc(100px + (183 - 100) * ( (100vw - 320px) / (1170 - 320) ));
+            height: calc(24px + (43 - 24) * ( (100vw - 320px) / (1170 - 320) ));
+            font-size: calc(10px + (13 - 10) * ( (100vw - 320px) / (1170 - 320) ));
+        }
+    }
+
+    &__orderBtn {
+        background: $second-text-color;
+        color: $default-text-color;
+        border: 1px solid $default-text-color;
+        margin-right: 30px;
+
+        &:hover {
+            background: $default-text-color;
+            color: $second-text-color;
+            border: 1px solid $second-text-color;
+        }
+    }
+
+    @include max-screen($sm) {
+        padding-top: $header-height;
+    }
+}
