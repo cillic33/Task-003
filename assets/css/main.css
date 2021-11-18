@@ -541,4 +541,125 @@ input, select {
   color: #3E9CDC;
 }
 
+.footer {
+  width: 100%;
+  height: auto;
+  background: #3D4050;
+}
+.footer__wrapper {
+  width: 100%;
+  height: auto;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 30px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1230px) {
+  .footer__wrapper {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.footer__block p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+}
+.footer__icon a {
+  display: inline-flex;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 13px;
+  text-align: center;
+  color: #ffffff;
+  text-decoration: none;
+  transition: 0.5s;
+}
+.footer__icon a:hover {
+  color: #3e9cdc;
+  transform: scale(1.1);
+}
+.footer__icon:before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.footer__center {
+  display: flex;
+}
+@media screen and (max-width: 560px) {
+  .footer__center {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.footer__center-qiwi {
+  margin-right: 40px;
+}
+@media screen and (max-width: 560px) {
+  .footer__center-qiwi {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+.footer__center-qiwi:before {
+  background: url("../img/qiwi-icon.svg") no-repeat center;
+}
+.footer__center-ya-money {
+  margin-right: 40px;
+}
+@media screen and (max-width: 560px) {
+  .footer__center-ya-money {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+.footer__center-ya-money:before {
+  background: url("../img/ya-money-icon.svg") no-repeat center;
+}
+.footer__center-web-money:before {
+  background: url("../img/web-money-icon.svg") no-repeat center;
+}
+.footer__right {
+  display: flex;
+}
+@media screen and (max-width: 560px) {
+  .footer__right {
+    justify-content: center;
+    flex-direction: column;
+  }
+}
+.footer__right-mail {
+  margin-right: 40px;
+}
+@media screen and (max-width: 560px) {
+  .footer__right-mail {
+    margin: 0;
+    padding-bottom: 10px;
+  }
+}
+.footer__right-mail:before {
+  background: url("../img/mail-blue-icon.svg") no-repeat center;
+}
+.footer__right-vk:before {
+  background: url("../img/vk-icon.svg") no-repeat center;
+}
+.footer__splitter {
+  width: 1px;
+}
+@media screen and (max-width: 1230px) {
+  .footer__splitter {
+    transform: rotate(90deg);
+    height: 40px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
