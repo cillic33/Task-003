@@ -306,4 +306,10 @@
             color: $second-text-color;
         }
     }
+
+    &__iframe {
+        width: 0;
+        height: 0;
+        border: none;
+    }
 }

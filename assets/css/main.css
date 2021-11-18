@@ -562,6 +562,11 @@ input, select {
   background: #fff;
   color: #3E9CDC;
 }
+.order__iframe {
+  width: 0;
+  height: 0;
+  border: none;
+}
 
 .footer {
   width: 100%;

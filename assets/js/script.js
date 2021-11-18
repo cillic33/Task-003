@@ -58,4 +58,66 @@ document.addEventListener('DOMContentLoaded', () => {
         if (userAttachName) $('.order__label-file-input span').html(userAttachName);
     }
 
+    /* form validation */
+    const   orderForm = document.forms.orderForm,
+            typeOfSystem = orderForm.elements.typeOfSystem,
+            userEmail = orderForm.elements.userEmail,
+            userName = orderForm.elements.userName
+
+    let     formValidSuccess,
+            textError
+
+    showError = () => {
+        alert(textError)
+    }
+
+    isEmptyTypeOfSystem = () => {
+        if (typeOfSystem.value == '') { return true } else { return false }
+    }
+
+    isEmptyUserEmail = () => {
+        if (userEmail.value == '') { return true } else { return false }
+    }
+
+    isValidUserEmail = () => {
+        let pattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/
+        if (userEmail.value.match(pattern)) { return true } else { return false }
+    }
+
+    isEmptyUserName = () => {
+        if (userName.value == '') { return true } else { return false }
+    }
+    
+
+    orderForm.addEventListener('submit', e => {
+        formValidSuccess = true
+        textError = 'Форма не отправлена \n'
+
+        if (isEmptyTypeOfSystem()) {
+            formValidSuccess = false
+            textError += 'Заполните поле "Выберите тип системы" \n'
+        }
+
+        if (isEmptyUserEmail()) {
+            formValidSuccess = false
+            textError += 'Заполните поле "Ваш e-mail" \n'
+        }
+
+        if (!isEmptyUserEmail() && !isValidUserEmail()) {
+            formValidSuccess = false
+            textError += 'Поле "Ваш e-mail" заполнено неверно \n'
+        }
+
+        if (isEmptyUserName()) {
+            formValidSuccess = false
+            textError += 'Заполните поле "Ваше имя" \n'
+        }
+
+        if (!formValidSuccess) {
+            showError()
+            e.preventDefault()
+        } else {
+            alert('Спасибо, ваша заявка отправлена.')
+        }
+    })
 })
