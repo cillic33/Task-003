@@ -37,7 +37,7 @@
 
 		<section>
 			<div class="banner">
-				<div class="banner__img"><img src="assets/img/banner.png"></div>
+				<div class="banner__img"><img src="assets/img/banner.png" alt="Баннер 1"></div>
 				<div class="banner__wrapper">
 					<div class="banner__text">
 						<p class="banner__p banner__title"><span>Lorem ipsum</span> dolor sit<br>ametconsectetur <span>adipiscing</span></p>
@@ -56,10 +56,86 @@
 			</div>
 		</section>
 
-		<br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br>
-		<br><br><br><br><br><br><br><br>
+		<section>
+			<div class="order">
+				<div class="order__wrapper">
+					<div class="order__title">Оформление  <span>заказа</span></div>
+					<p class="order__note">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+
+					<section class="order__scheme">
+						<figure>
+							<div><img src="assets/img/search-icon.svg"></div>
+							<figcaption>Lorem ipsum dolor sit amet</figcaption>
+						</figure>
+						<figure>
+							<div><img src="assets/img/percent-icon.svg"></div>
+							<figcaption>Сonsecteturadipiscing elit</figcaption>
+						</figure>
+						<figure>
+							<div><img src="assets/img/file-icon.svg"></div>
+							<figcaption>Sed do eiusmod tempor</figcaption>
+						</figure>
+						<figure>
+							<div><img src="assets/img/mail-icon.svg"></div>
+							<figcaption>Esse cillum dolore eu fugiat</figcaption>
+						</figure>
+						<figure>
+							<div><img src="assets/img/pay-icon.svg"></div>
+							<figcaption>Excepteur sint occaecat cupidatat non proident</figcaption>
+						</figure>
+					</section>
+
+					<section class="order__form">
+						<form name="orderForm" action="" method="post" enctype="multipart/form-data">
+							<fieldset>
+								<select name="typeOfSystem" class="order__select">
+									<option value="">Выберите тип системы</option>
+									<option value="System 1">Система 1</option>
+									<option value="System 2">Система 2</option>
+									<option value="System 3">Система 3</option>
+								</select>
+							</fieldset>
+							
+							<fieldset>
+								<input type="text" name="userEmail" class="order__input" placeholder="Ваш e-mail">
+							</fieldset>
+
+							<fieldset>
+								<input type="text" name="userName" class="order__input" placeholder="Ваше имя">
+							</fieldset>
+
+							<fieldset>
+								<legend>
+									Sed ut perspiciatis, unde omnis iste natus
+									<span class="order__range-result">75%</span>
+								</legend>
+								
+								<input type="range" name="userPercent" class="order__input" min="0" max="100" step="1" value="75" oninput="setRange()"> 
+							</fieldset>
+
+							<fieldset>
+								<input type="file" name="userAttach" class="order__input" id="inputFile" oninput="setAttach()">
+								<label for="inputFile" class="order__label-file-input"><span>Прикрепить файл</span></label>
+							</fieldset>
+
+							<fieldset></fieldset>
+							<fieldset>
+								<input type="submit" name="orderFormSubmit" class="order__input" value="Отправить">
+							</fieldset>
+							<fieldset></fieldset>
+						</form>
+					</section>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="footer">
+				<div class="footer__wrapper">
+					
+				</div>
+			</div>
+		</footer>
 
 	
 		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>

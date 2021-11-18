@@ -4,6 +4,12 @@
     }
 }
 
+@mixin interval-screen($min-width, $max-width) {
+    @media (min-width: $min-width) and (max-width: $max-width) {
+        @content;
+    }
+}
+
 @mixin is-hover {
     @media (hover: hover) and (pointer: fine) {
         @content;
@@ -16,8 +22,3 @@
     }
 }
 
-@mixin change-content($min-width, $max-width) {
-    @media (min-width: $min-width) and (max-width: $max-width) {
-        @content;
-    }
-}

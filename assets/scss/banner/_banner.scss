@@ -1,8 +1,13 @@
 .banner {
     width: 100%;
 
+    @include max-screen($wrapper-size) {
+        padding-top: $header-height;
+    }
+
     &__img {
         width: 100%;
+        font-size: 0;
 
         img {
             width: 100%;
@@ -32,13 +37,13 @@
     }
 
     &__groupP {
-        margin: 80px 0;
+        margin-top: 60px;
 
-        @include change-content($xxs, $wrapper-size) {
-            margin: calc(10px + (80 - 10) * ( (100vw - 320px) / (1170 - 320) )) 0;
+        @include interval-screen($ssm, $lg) {
+            margin-top: calc(10px + (60 - 10) * ( (100vw - 560px) / (1230 - 560) ));
         }
-        @include change-content($sm, $lg) {
-            margin: 20px 0;
+        @include max-screen($ssm) {
+            display: none;
         }
     }
 
@@ -49,7 +54,7 @@
         font-size: 20px;
         font-style: $default-font-style;
 
-        @include change-content($xxs, $wrapper-size) {
+        @include interval-screen($xxs, $wrapper-size) {
             font-size: calc(8px + (20 - 8) * ( (100vw - 320px) / (1170 - 320) ));
         }
     }
@@ -65,7 +70,7 @@
             font-family: $default-font-family;
         }
 
-        @include change-content($xxs, $wrapper-size) {
+        @include interval-screen($xxs, $wrapper-size) {
             font-size: calc(13px + (48 - 13) * ( (100vw - 320px) / (1170 - 320) ));
         }
     }
@@ -94,7 +99,12 @@
         border-radius: 3px;
         cursor: pointer;
         transition: 0.5s;
+        margin-top: 60px;
 
+        @include interval-screen($xxs, $lg) {
+            margin-top: calc(10px + (60 - 10) * ( (100vw - 320px) / (1230 - 320) ));
+        }
+        
         &:hover {
             background: #444;
             color: $default-text-color;
@@ -102,10 +112,10 @@
             font-weight: 500;
         }
 
-        @include change-content($xxs, $wrapper-size) {
-            width: calc(100px + (183 - 100) * ( (100vw - 320px) / (1170 - 320) ));
-            height: calc(24px + (43 - 24) * ( (100vw - 320px) / (1170 - 320) ));
-            font-size: calc(10px + (13 - 10) * ( (100vw - 320px) / (1170 - 320) ));
+        @include interval-screen($xxs, $lg) {
+            width: calc(120px + (183 - 120) * ( (100vw - 320px) / (1230 - 320) ));
+            height: calc(28px + (43 - 28) * ( (100vw - 320px) / (1230 - 320) ));
+            font-size: calc(12px + (13 - 12) * ( (100vw - 320px) / (1230 - 320) ));
         }
     }
 
@@ -120,9 +130,5 @@
             color: $second-text-color;
             border: 1px solid $second-text-color;
         }
-    }
-
-    @include max-screen($sm) {
-        padding-top: $header-height;
     }
 }
