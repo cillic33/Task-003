@@ -25,20 +25,20 @@
 		padding: 0 30px;
 		
 		a {
-			display: flex;
+			@include flex;
 			color: #ffffff;
 			font-style: normal;
 			font-weight: 400;
 			font-size: 14px;
 			text-transform: uppercase;
 			text-decoration: none;
-			transition: 0.5s;
+			@include transition(0.5s);
 		}
 
 		@include is-hover {
 			a:hover {
 				color: #3e9cdc;
-				transform: scale(1.1);
+				@include transform(scale(1.1));
 			}
 		}
 

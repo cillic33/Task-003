@@ -11,18 +11,10 @@
 		height: $header-height;
 		max-width: $wrapper-size;
 		margin: 0 auto;
-		
-		display: -webkit-flex; 
-		display: flex;
-		
-		-webkit-flex-direction: row;
-		flex-direction: row;
-		
-		-webkit-justify-content: space-between;
-		justify-content: space-between;
-		
-		-webkit-align-items: center;
-		align-items: center;
+		@include flex;
+		@include flex-direction(row);
+		@include justify-content(space-between);
+		@include align-items(center);
 
 		@include max-screen($lg) {
 			padding: 0 30px;

@@ -9,14 +9,13 @@
 		max-width: $wrapper-size;
 		margin: 0 auto;
         padding: 30px 0;
-
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+        @include flex;
+        @include align-items(center);
+        @include justify-content(space-between);
 
         @include max-screen($lg) {
-            justify-content: center;
-            flex-direction: column;
+            @include justify-content(center);
+            @include flex-direction(column);
         }
     }
 
@@ -32,7 +31,7 @@
 
     &__icon {
         a {
-            display: inline-flex;
+            @include inline-flex;
             font-family: $default-font-family;
             font-weight: $default-font-weight;
             font-style: $default-font-style;
@@ -40,11 +39,11 @@
             text-align: center;
             color: $default-text-color;
             text-decoration: none;
-            transition: .5s;
+            @include transition(.5s);
 
             &:hover {
                 color: #3e9cdc;
-                transform: scale(1.1);
+                @include transform(scale(1.1));
             }
         }
 
@@ -59,11 +58,11 @@
     }
 
     &__center {
-        display: flex;
+        @include flex;
 
         @include max-screen($ssm) {
-            justify-content: center;
-            flex-direction: column;
+            @include justify-content(center);
+            @include flex-direction(column);
         }
 
         &-qiwi {
@@ -83,7 +82,7 @@
 
             @include max-screen($ssm) {
                 margin: 0;
-                padding-bottom: 10px; 
+                padding-bottom: 10px;
             }
 
             &:before {
@@ -98,11 +97,11 @@
     }
 
     &__right {
-        display: flex;
+        @include flex;
 
         @include max-screen($ssm) {
-            justify-content: center;
-            flex-direction: column;
+            @include justify-content(center);
+            @include flex-direction(column);
         }
 
         &-mail {
@@ -128,7 +127,7 @@
         width: 1px;
 
         @include max-screen($lg) {
-            transform: rotate(90deg);
+            @include transform(rotate(90deg));
             height: 40px;
         }
     }

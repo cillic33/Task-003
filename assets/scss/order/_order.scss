@@ -51,10 +51,9 @@
             box-sizing: border-box;
 
             div {
-                display: -webkit-inline-flex;
-                display: inline-flex;
-                align-items: center;
-                justify-content: center;
+                @include inline-flex;
+                @include align-items(center);
+                @include justify-content(center);
                 width: 100px;
                 height: 100px;
                 background: #3E9CDC;
@@ -139,9 +138,9 @@
         }
 
         form {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
+            @include flex;
+            @include flex-wrap(wrap);
+            @include justify-content(space-between);
         }
 
         fieldset {
@@ -194,7 +193,7 @@
         background: $order-el-bg-color url(../img/select-arrow.svg) no-repeat right 21px center;
         cursor: pointer;
         color: $order-el-text-color;
-        transition: .5s;
+        @include transition(.5s);
 
         &:hover {
             background: #fff url(../img/select-arrow.svg) no-repeat right 21px center;
@@ -212,7 +211,7 @@
         background: $order-el-bg-color;
         cursor: pointer;
         color: $order-el-text-color;
-        transition: .5s;
+        @include transition(.5s);
 
         &::placeholder {
             color: $order-el-text-color;
@@ -233,9 +232,9 @@
         margin: 0;
 
         &::-webkit-slider-thumb {
+            @include appearance(none);
             width: 24px;
             height: 24px;
-            -webkit-appearance: none;
             cursor: pointer;
             background: #42A9ED;
             border: 1px solid #286690;
@@ -248,9 +247,9 @@
     }
 
     &__label-file-input {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
+        @include inline-flex;
+        @include align-items(center);
+        @include justify-content(center);
         width: 100%;
         height: 48px;
         border: 2px solid $second-text-color;
@@ -259,7 +258,7 @@
         box-sizing: border-box;
         background: #fff;
         cursor: pointer;
-        transition: .5s;
+        @include transition(.5s);
 
         span {
             display: block;
@@ -299,8 +298,8 @@
         background: $second-text-color;
         cursor: pointer;
         color: #fff;
-        transition: .5s;
         text-transform: uppercase;
+        @include transition(.5s);
 
         &:hover {
             background: #fff;
