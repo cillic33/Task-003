@@ -118,6 +118,8 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault()
         } else {
             alert('Спасибо, ваша заявка отправлена.')
+            orderForm.reset()
+            $('.order__label-file-input span').html('Прикрепить файл')
         }
     })
 })
