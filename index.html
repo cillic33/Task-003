@@ -13,144 +13,136 @@
 	</head>
 	<body>
 	
-		<header>
-			<div class="header">
-				<div class="header__wrapper">
-					
-					<div class="logo header__logo">
-						LoremIpsum.<span>Net</span>
-					</div>
-					
-					<div class="menu header__menu">
-						<div class="menu__icon"><img src="assets/img/bars-solid.svg" alt="Header menu icon" onClick="$('.menu__body').slideToggle()"></div>
-						<div class="menu__body">
-							<div class="menu__item"><a href="#">Бизнес</a></div>
-							<div class="menu__item"><a href="#">О нас</a></div>
-							<div class="menu__item"><a href="#">Цены</a></div>
-							<div class="menu__item"><a href="#">Оформить заказ</a></div>
-						</div>
-					</div>
-					
+		<header class="header">
+			<div class="header__wrapper">
+				
+				<div class="logo header__logo">
+					LoremIpsum.<span>Net</span>
 				</div>
+				
+				<div class="menu header__menu">
+					<div class="menu__icon"><img src="assets/img/bars-solid.svg" alt="Header menu icon" onClick="$('.menu__body').slideToggle()"></div>
+					<div class="menu__body">
+						<div class="menu__item"><a href="#">Бизнес</a></div>
+						<div class="menu__item"><a href="#">О нас</a></div>
+						<div class="menu__item"><a href="#">Цены</a></div>
+						<div class="menu__item"><a href="#">Оформить заказ</a></div>
+					</div>
+				</div>
+				
 			</div>
 		</header>
 
-		<section>
-			<div class="banner">
-				<div class="banner__img"><img src="assets/img/banner.png" alt="Баннер 1"></div>
-				<div class="banner__wrapper">
-					<div class="banner__text">
-						<p class="banner__p banner__title"><span>Lorem ipsum</span> dolor sit<br>ametconsectetur <span>adipiscing</span></p>
+		<section class="banner">
+			<div class="banner__img"><img src="assets/img/banner.png" alt="Баннер 1"></div>
+			<div class="banner__wrapper">
+				<div class="banner__text">
+					<p class="banner__p banner__title"><span>Lorem ipsum</span> dolor sit<br>ametconsectetur <span>adipiscing</span></p>
 
-						<div class="banner__groupP">
-							<p class="banner__p banner__title2">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
-							<p class="banner__p"> - Totam rem aperiam eaque ipsa</p>
-							<p class="banner__p"> - Sit voluptatem accusantium doloremque laudantium</p>
-							<p class="banner__p"> - Sed ut perspiciatis, unde omnis iste natus error</p>
-						</div>
-
-						<a href="#" class="banner__btn banner__orderBtn"><span>Заказать</span></a>
-						<a href="#" class="banner__btn banner__moreBtn"><span>Подробнее</span></a>
+					<div class="banner__groupP">
+						<p class="banner__p banner__title2">At vero eos et accusamus et iusto odio dignissimos ducimus!</p>
+						<p class="banner__p"> - Totam rem aperiam eaque ipsa</p>
+						<p class="banner__p"> - Sit voluptatem accusantium doloremque laudantium</p>
+						<p class="banner__p"> - Sed ut perspiciatis, unde omnis iste natus error</p>
 					</div>
+
+					<a href="#" class="banner__btn banner__orderBtn"><span>Заказать</span></a>
+					<a href="#" class="banner__btn banner__moreBtn"><span>Подробнее</span></a>
 				</div>
 			</div>
 		</section>
 
-		<section>
-			<div class="order">
-				<div class="order__wrapper">
-					<div class="order__title">Оформление  <span>заказа</span></div>
-					<p class="order__note">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
+		<section class="order">
+			<div class="order__wrapper">
+				<div class="order__title">Оформление  <span>заказа</span></div>
+				<p class="order__note">Перед заполнением формы ознакомьтесь с нашей схемой работы!</p>
 
-					<section class="order__scheme">
-						<figure>
-							<div><img src="assets/img/search-icon.svg"></div>
-							<figcaption>Lorem ipsum dolor sit amet</figcaption>
-						</figure>
-						<figure>
-							<div><img src="assets/img/percent-icon.svg"></div>
-							<figcaption>Сonsecteturadipiscing elit</figcaption>
-						</figure>
-						<figure>
-							<div><img src="assets/img/file-icon.svg"></div>
-							<figcaption>Sed do eiusmod tempor</figcaption>
-						</figure>
-						<figure>
-							<div><img src="assets/img/mail-icon.svg"></div>
-							<figcaption>Esse cillum dolore eu fugiat</figcaption>
-						</figure>
-						<figure>
-							<div><img src="assets/img/pay-icon.svg"></div>
-							<figcaption>Excepteur sint occaecat cupidatat non proident</figcaption>
-						</figure>
-					</section>
+				<section class="order__scheme">
+					<figure>
+						<div><img src="assets/img/search-icon.svg"></div>
+						<figcaption>Lorem ipsum dolor sit amet</figcaption>
+					</figure>
+					<figure>
+						<div><img src="assets/img/percent-icon.svg"></div>
+						<figcaption>Сonsecteturadipiscing elit</figcaption>
+					</figure>
+					<figure>
+						<div><img src="assets/img/file-icon.svg"></div>
+						<figcaption>Sed do eiusmod tempor</figcaption>
+					</figure>
+					<figure>
+						<div><img src="assets/img/mail-icon.svg"></div>
+						<figcaption>Esse cillum dolore eu fugiat</figcaption>
+					</figure>
+					<figure>
+						<div><img src="assets/img/pay-icon.svg"></div>
+						<figcaption>Excepteur sint occaecat cupidatat non proident</figcaption>
+					</figure>
+				</section>
 
-					<section class="order__form">
-						<form name="orderForm" action="" method="post" enctype="multipart/form-data" target="orderIframe">
-							<fieldset>
-								<select name="typeOfSystem" class="order__select" reguired>
-									<option value="">Выберите тип системы</option>
-									<option value="System 1">Система 1</option>
-									<option value="System 2">Система 2</option>
-									<option value="System 3">Система 3</option>
-								</select>
-							</fieldset>
+				<section class="order__form">
+					<form name="orderForm" action="" method="post" enctype="multipart/form-data" target="orderIframe">
+						<fieldset>
+							<select name="typeOfSystem" class="order__select" reguired>
+								<option value="">Выберите тип системы</option>
+								<option value="System 1">Система 1</option>
+								<option value="System 2">Система 2</option>
+								<option value="System 3">Система 3</option>
+							</select>
+						</fieldset>
+						
+						<fieldset>
+							<input type="text" name="userEmail" class="order__input" placeholder="Ваш e-mail" reguired>
+						</fieldset>
+
+						<fieldset>
+							<input type="text" name="userName" class="order__input" placeholder="Ваше имя" reguired>
+						</fieldset>
+
+						<fieldset>
+							<legend>
+								Sed ut perspiciatis, unde omnis iste natus
+								<span class="order__range-result">75%</span>
+							</legend>
 							
-							<fieldset>
-								<input type="text" name="userEmail" class="order__input" placeholder="Ваш e-mail" reguired>
-							</fieldset>
+							<input type="range" name="userPercent" class="order__input" min="0" max="100" step="1" value="75" oninput="setRange()"> 
+						</fieldset>
 
-							<fieldset>
-								<input type="text" name="userName" class="order__input" placeholder="Ваше имя" reguired>
-							</fieldset>
+						<fieldset>
+							<input type="file" name="userAttach" class="order__input" id="inputFile" oninput="setAttach()">
+							<label for="inputFile" class="order__label-file-input"><span>Прикрепить файл</span></label>
+						</fieldset>
 
-							<fieldset>
-								<legend>
-									Sed ut perspiciatis, unde omnis iste natus
-									<span class="order__range-result">75%</span>
-								</legend>
-								
-								<input type="range" name="userPercent" class="order__input" min="0" max="100" step="1" value="75" oninput="setRange()"> 
-							</fieldset>
-
-							<fieldset>
-								<input type="file" name="userAttach" class="order__input" id="inputFile" oninput="setAttach()">
-								<label for="inputFile" class="order__label-file-input"><span>Прикрепить файл</span></label>
-							</fieldset>
-
-							<fieldset></fieldset>
-							<fieldset>
-								<input type="submit" name="orderFormSubmit" class="order__input" value="Отправить">
-							</fieldset>
-							<fieldset></fieldset>
-						</form>
-						<iframe name="orderIframe" class="order__iframe"></iframe>
-					</section>
-				</div>
+						<fieldset></fieldset>
+						<fieldset>
+							<input type="submit" name="orderFormSubmit" class="order__input" value="Отправить">
+						</fieldset>
+						<fieldset></fieldset>
+					</form>
+					<iframe name="orderIframe" class="order__iframe"></iframe>
+				</section>
 			</div>
 		</section>
 
-		<footer>
-			<div class="footer">
-				<div class="footer__wrapper">
-					<div class="footer__block footer__left">
-						<p>© 2018 «LoremIpsum.net» Все права защищены.</p>
-					</div>
-					<div class="footer__splitter">
-						<img src="assets/img/footer-splitter.svg">
-					</div>
-					<div class="footer__block footer__center">
-						<p class="footer__icon footer__center-qiwi">Qiwi wallet</p>
-						<p class="footer__icon footer__center-ya-money">Yandex Money</p>
-						<p class="footer__icon footer__center-web-money">Web Money</p>
-					</div>
-					<div class="footer__splitter">
-						<img src="assets/img/footer-splitter.svg">
-					</div>
-					<div class="footer__block footer__right">
-						<p class="footer__icon footer__right-mail"><a href="mailto:info@ipsum228.com">info@ipsum228.com</a></p>
-						<p class="footer__icon footer__right-vk"><a href="https://vk.com/feed" target="_blank">Мы вконтакте</a></p>
-					</div>
+		<footer class="footer">
+			<div class="footer__wrapper">
+				<div class="footer__block footer__left">
+					<p>© 2018 «LoremIpsum.net» Все права защищены.</p>
+				</div>
+				<div class="footer__splitter">
+					<img src="assets/img/footer-splitter.svg">
+				</div>
+				<div class="footer__block footer__center">
+					<p class="footer__icon footer__center-qiwi">Qiwi wallet</p>
+					<p class="footer__icon footer__center-ya-money">Yandex Money</p>
+					<p class="footer__icon footer__center-web-money">Web Money</p>
+				</div>
+				<div class="footer__splitter">
+					<img src="assets/img/footer-splitter.svg">
+				</div>
+				<div class="footer__block footer__right">
+					<p class="footer__icon footer__right-mail"><a href="mailto:info@ipsum228.com">info@ipsum228.com</a></p>
+					<p class="footer__icon footer__right-vk"><a href="https://vk.com/feed" target="_blank">Мы вконтакте</a></p>
 				</div>
 			</div>
 		</footer>

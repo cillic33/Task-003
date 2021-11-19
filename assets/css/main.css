@@ -161,6 +161,8 @@ input, select {
   max-width: 1170px;
   margin: 0 auto;
   font-size: 0;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
 }
 @media screen and (max-width: 1230px) {
   .banner__text {
@@ -242,11 +244,13 @@ input, select {
     margin-top: calc(10px + 50 * (100vw - 320px) / 910);
   }
 }
-.banner__btn:hover {
-  background: #444;
-  color: #ffffff;
-  border: 1px solid #ffffff;
-  font-weight: 500;
+@media (hover: hover) and (pointer: fine) {
+  .banner__btn:hover {
+    background: #444;
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    font-weight: 500;
+  }
 }
 @media (min-width: 320px) and (max-width: 1230px) {
   .banner__btn {
@@ -261,10 +265,12 @@ input, select {
   border: 1px solid #ffffff;
   margin-right: 30px;
 }
-.banner__orderBtn:hover {
-  background: #ffffff;
-  color: #3E9CDC;
-  border: 1px solid #3E9CDC;
+@media (hover: hover) and (pointer: fine) {
+  .banner__orderBtn:hover {
+    background: #ffffff;
+    color: #3E9CDC;
+    border: 1px solid #3E9CDC;
+  }
 }
 
 .order {
@@ -558,9 +564,11 @@ input, select {
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-.order__input[type=submit]:hover {
-  background: #fff;
-  color: #3E9CDC;
+@media (hover: hover) and (pointer: fine) {
+  .order__input[type=submit]:hover {
+    background: #fff;
+    color: #3E9CDC;
+  }
 }
 .order__iframe {
   width: 0;

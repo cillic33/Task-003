@@ -28,6 +28,7 @@
 		max-width: $wrapper-size;
         margin: 0 auto;
         font-size: 0;
+        @include transition(.5s);
 
         @include max-screen($lg) {
             box-sizing: border-box;
@@ -104,11 +105,13 @@
             margin-top: calc(10px + (60 - 10) * ( (100vw - 320px) / (1230 - 320) ));
         }
         
-        &:hover {
-            background: #444;
-            color: $default-text-color;
-            border: 1px solid $default-text-color;
-            font-weight: 500;
+        @include is-hover {
+            &:hover {
+                background: #444;
+                color: $default-text-color;
+                border: 1px solid $default-text-color;
+                font-weight: 500;
+            }
         }
 
         @include interval-screen($xxs, $lg) {
@@ -124,10 +127,12 @@
         border: 1px solid $default-text-color;
         margin-right: 30px;
 
-        &:hover {
-            background: $default-text-color;
-            color: $second-text-color;
-            border: 1px solid $second-text-color;
+        @include is-hover {
+            &:hover {
+                background: $default-text-color;
+                color: $second-text-color;
+                border: 1px solid $second-text-color;
+            }
         }
     }
 }

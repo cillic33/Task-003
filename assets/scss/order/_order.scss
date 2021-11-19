@@ -301,9 +301,11 @@
         text-transform: uppercase;
         @include transition(.5s);
 
-        &:hover {
-            background: #fff;
-            color: $second-text-color;
+        @include is-hover {
+            &:hover {
+                background: #fff;
+                color: $second-text-color;
+            }
         }
     }
 

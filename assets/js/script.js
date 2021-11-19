@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const   sm = 800,
             wrapperSize = 1170
             
-    let     docWidth,
+    let     docWidth, /* document width without scroll */
             bannerHeight,
             bannerTextHeight,
-            delta,
+            delta, /* top padding for the banner text */
             resizeTimeoutId
             
     let calculateDelta = () => {
@@ -17,6 +17,12 @@ document.addEventListener('DOMContentLoaded', () => {
         delta = Math.round((bannerHeight - bannerTextHeight) / 2)
         return delta
     }
+
+    $(function() {
+        /* align the text on the banner */
+        delta = calculateDelta()
+        $('.banner__text').css('paddingTop', delta+'px')
+    })
 
     window.addEventListener('resize', e => {
         clearTimeout(resizeTimeoutId)
@@ -29,9 +35,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 $('.menu__body').hide()
             }
     
+            /* align the text on the banner */
             delta = calculateDelta()
             $('.banner__text').css('paddingTop', delta+'px')
-        }, 500);
+        }, 500)
     })
 
     window.addEventListener('click', e => {
@@ -42,9 +49,6 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.menu__body').slideUp()
         }
     })
-
-    delta = calculateDelta()
-    $('.banner__text').css('paddingTop', delta+'px')
 
     
     /* order form */
