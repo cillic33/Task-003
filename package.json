@@ -1,0 +1,40 @@
+{
+  "name": "soft-nsk-test",
+  "version": "1.0.0",
+  "description": "сборка gulp\u001b[D\u001b[D\u001b[D\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[3~\u001b[F\u001b[F\u001b[B\u001b[B\u001b[B\u001b[F\u001b[F\u001b[B\u001b[B\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[C\u001b[Cbuilding gulp",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cillic33/Soft-nsk-test.git"
+  },
+  "author": "cillic",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cillic33/Soft-nsk-test/issues"
+  },
+  "homepage": "https://github.com/cillic33/Soft-nsk-test#readme",
+  "devDependencies": {
+    "del": "^6.0.0",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^8.0.0",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-image": "^6.2.1",
+    "gulp-imagemin": "^8.0.0",
+    "gulp-rev-append": "^0.1.8",
+    "gulp-sass": "^5.0.0",
+    "gulp-selectors": "^0.1.10",
+    "gulp-svg-sprite": "^1.5.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.43.4"
+  },
+  "dependencies": {
+    "gulp-version-number": "^0.2.4",
+    "uglify": "^0.1.5",
+    "uglify-js": "^3.14.3"
+  }
+}

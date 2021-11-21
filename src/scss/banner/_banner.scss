@@ -1,0 +1,138 @@
+.banner {
+    width: 100%;
+
+    @include max-screen($wrapper-size) {
+        padding-top: $header-height;
+    }
+
+    &__img {
+        width: 100%;
+        font-size: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__wrapper {
+		width: 100%;
+		height: auto;
+        position: absolute;
+        padding-top: $header-height;
+        top: 0;
+    }
+
+    &__text {
+		width: 100%;
+		height: auto;
+		max-width: $wrapper-size;
+        margin: 0 auto;
+        font-size: 0;
+        transition: all .5s ease;
+
+        @include max-screen($lg) {
+            box-sizing: border-box;
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+    }
+
+    &__groupP {
+        margin-top: 60px;
+
+        @include interval-screen($ssm, $lg) {
+            margin-top: calc(10px + (60 - 10) * ( (100vw - 560px) / (1230 - 560) ));
+        }
+        @include max-screen($ssm) {
+            display: none;
+        }
+    }
+
+    &__p {
+        color: #000;
+        font-family: $default-font-family;
+        font-weight: 400;
+        font-size: 20px;
+        font-style: $default-font-style;
+
+        @include interval-screen($xxs, $wrapper-size) {
+            font-size: calc(8px + (20 - 8) * ( (100vw - 320px) / (1170 - 320) ));
+        }
+    }
+
+    &__title {
+        font-weight: 700;
+        font-size: 48px;
+        text-transform: uppercase;
+        font-family: $second-font-family;
+
+        span {
+            color: $second-text-color;
+            font-family: $default-font-family;
+        }
+
+        @include interval-screen($xxs, $wrapper-size) {
+            font-size: calc(13px + (48 - 13) * ( (100vw - 320px) / (1170 - 320) ));
+        }
+    }
+
+    &__title2 {
+        font-weight: 700;
+    }
+
+    &__btn {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        width: 183px;
+        height: 43px;
+        font-family: $default-font-family;
+        font-size: 13px;
+        font-weight: 400;
+        font-style: $default-font-style;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        color: $third-text-color;
+        border: 1px solid $third-text-color;
+        background: $default-text-color;
+        border-radius: 3px;
+        cursor: pointer;
+        transition: all 0,5s ease;
+        margin-top: 60px;
+
+        @include interval-screen($xxs, $lg) {
+            margin-top: calc(10px + (60 - 10) * ( (100vw - 320px) / (1230 - 320) ));
+        }
+        
+        @include is-hover {
+            &:hover {
+                background: #444;
+                color: $default-text-color;
+                border: 1px solid $default-text-color;
+                font-weight: 500;
+            }
+        }
+
+        @include interval-screen($xxs, $lg) {
+            width: calc(120px + (183 - 120) * ( (100vw - 320px) / (1230 - 320) ));
+            height: calc(28px + (43 - 28) * ( (100vw - 320px) / (1230 - 320) ));
+            font-size: calc(12px + (13 - 12) * ( (100vw - 320px) / (1230 - 320) ));
+        }
+    }
+
+    &__orderBtn {
+        background: $second-text-color;
+        color: $default-text-color;
+        border: 1px solid $default-text-color;
+        margin-right: 30px;
+
+        @include is-hover {
+            &:hover {
+                background: $default-text-color;
+                color: $second-text-color;
+                border: 1px solid $second-text-color;
+            }
+        }
+    }
+}
