@@ -8,7 +8,8 @@ var gulp = require('gulp'),
 	uglify = require('gulp-uglify'),
 	del = require('del'),
 	image = require('gulp-image'),
-	svgSprite = require('gulp-svg-sprite')
+	svgSprite = require('gulp-svg-sprite'),
+	htmlmin = require('gulp-htmlmin')
 
 gulp.task('css', () => {
 	gulp.src('src/scss/*.scss')
@@ -51,7 +52,8 @@ gulp.task('svgSprite', () => {
 
 gulp.task('html', () => {
 	gulp.src('src/index.html')
+	.pipe(htmlmin({ collapseWhitespace: true }))
 	.pipe(gulp.dest('build'))
 })
 
-gulp.task('default', ['clean', 'css', 'js', /*'images',*/ 'svgSprite', 'html'])
+gulp.task('default', ['clean', 'css', 'js', 'images', 'svgSprite', 'html'])

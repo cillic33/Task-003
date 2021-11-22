@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
             delta, /* top padding for the banner text */
             resizeTimeoutId
             
+    /* calculating the top padding for the banner text */
     let calculateDelta = () => {
         docWidth = document.documentElement.clientWidth
         bannerHeight = $('.banner').height()
@@ -29,23 +30,24 @@ document.addEventListener('DOMContentLoaded', () => {
         resizeTimeoutId = setTimeout(() => {
             docWidth = document.documentElement.clientWidth
 
+            /* hiding the header menu in the mobile version */
             if (docWidth > sm) {
                 $('.menu__body').show()
             } else {
                 $('.menu__body').hide()
             }
     
-            /* align the text on the banner */
+            /* alignment of the text on the banner */
             delta = calculateDelta()
             $('.banner__text').css('paddingTop', delta+'px')
         }, 500)
     })
 
+    /* hiding the header menu when clicking outside it */
     window.addEventListener('click', e => {
         const target = e.target
         docWidth = document.documentElement.clientWidth
         if (!(target).closest('.header__menu') && docWidth <= 800) {
-            console.log(sm)
             $('.menu__body').slideUp()
         }
     })

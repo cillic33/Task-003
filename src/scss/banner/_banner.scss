@@ -98,7 +98,7 @@
         background: $default-text-color;
         border-radius: 3px;
         cursor: pointer;
-        transition: all 0,5s ease;
+        transition: all 0.5s ease;
         margin-top: 60px;
 
         @include interval-screen($xxs, $lg) {
@@ -107,10 +107,7 @@
         
         @include is-hover {
             &:hover {
-                background: #444;
-                color: $default-text-color;
-                border: 1px solid $default-text-color;
-                font-weight: 500;
+                background: $default-text-color-darker;
             }
         }
 
@@ -129,9 +126,7 @@
 
         @include is-hover {
             &:hover {
-                background: $default-text-color;
-                color: $second-text-color;
-                border: 1px solid $second-text-color;
+                background: $second-text-color-darker;
             }
         }
     }

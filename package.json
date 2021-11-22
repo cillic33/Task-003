@@ -33,6 +33,7 @@
     "sass": "^1.43.4"
   },
   "dependencies": {
+    "gulp-htmlmin": "^5.0.1",
     "gulp-version-number": "^0.2.4",
     "uglify": "^0.1.5",
     "uglify-js": "^3.14.3"
