@@ -1,1 +1,8 @@
 node_modules
+src
+build
+_config.yml
+.gitignore
+gulpfile.js
+package-lock.json
+package.json
