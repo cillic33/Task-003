@@ -1,27 +1,26 @@
+const   sm = 800,
+        wrapperSize = 1170,
+        headerHeight = 100
+
+let     docWidth, /* document width without scroll */
+        bannerHeight,
+        divBannerImg = $('.banner__img'),
+        divBannerWrapper = $('.banner__wrapper')
+
+setBannerHeight = () => {
+    docWidth = document.documentElement.clientWidth
+
+    bannerHeight = divBannerImg.height()
+    if (docWidth > wrapperSize) { bannerHeight -= headerHeight }
+    divBannerWrapper.css('height', bannerHeight+'px')
+    divBannerWrapper.show()
+}
+
+window.onload = () => {
+    setBannerHeight()
+ }
+
 document.addEventListener('DOMContentLoaded', () => {
-
-    const   sm = 800,
-            wrapperSize = 1170,
-            headerHeight = 100
-            
-    let     docWidth, /* document width without scroll */
-            bannerHeight,
-            bannerImg = $('.banner__img'),
-            bannerWrapper = $('.banner__wrapper')
-            
-    setBannerHeight = () => {
-        docWidth = document.documentElement.clientWidth
-
-        bannerHeight = bannerImg.height()
-        if (docWidth > wrapperSize) { bannerHeight -= headerHeight }
-        alert(bannerHeight)
-        bannerWrapper.css('height', bannerHeight+'px')
-        bannerWrapper.show()
-    }
-
-    $(function() {
-        setBannerHeight()
-    })
 
     window.addEventListener('resize', e => {
         docWidth = document.documentElement.clientWidth
@@ -33,7 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
             $('.menu__body').hide()
         }
 
-        bannerWrapper.hide()
         setBannerHeight()
     })
 
