@@ -9,11 +9,9 @@ let     docWidth, /* document width without scroll */
 
 setBannerHeight = () => {
     docWidth = document.documentElement.clientWidth
-
     bannerHeight = divBannerImg.height()
     if (docWidth > wrapperSize) { bannerHeight -= headerHeight }
     divBannerWrapper.css('height', bannerHeight+'px')
-    divBannerWrapper.show()
 }
 
 window.onload = () => {
