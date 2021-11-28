@@ -1,0 +1,25 @@
+html, body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: $default-font-family;
+	font-weight: $default-font-weight;
+	font-style: $default-font-style;
+	font-size: $default-font-size;
+	color: $default-text-color;
+	min-height: 100vh;
+}
+
+p {
+	margin: 0;
+}
+
+input, select {
+	appearance: none;
+	outline: none;
+	font-family: $default-font-family;
+	font-weight: $default-font-weight;
+	font-style: $default-font-style;
+}
