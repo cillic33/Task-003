@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         bannerHeight = bannerImg.height()
         if (docWidth > wrapperSize) { bannerHeight -= headerHeight }
+        alert(bannerHeight)
         bannerWrapper.css('height', bannerHeight+'px')
         bannerWrapper.show()
     }
